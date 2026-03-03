@@ -1,6 +1,6 @@
 # 🌿 Food Chain: Traceability System
 
-![Food Chain Banner](https://images.unsplash.com/photo-1592982537447-6f2ba1299df9?w=1200&auto=format&fit=crop)
+![Food Chain Banner](https://foodready.ai/wp-content/uploads/2024/09/food-traceability-in-food-production-chain.webp)
 
 **Redefining Trust in the Food Chain with Blockchain and IoT.**
 
