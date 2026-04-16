@@ -124,7 +124,7 @@ app.post('/api/generate-qr', async (req, res) => {
     const data = req.body;
     const farmerAadhar = data.farmerAadhar; // Assuming the Aadhar number is in the request body
     // Use path parameter format for the QR code
-    const qrData = `http://localhost:5000/trace/${farmerAadhar}`;
+    const qrData = `${req.protocol}://${req.get('host')}/trace/${farmerAadhar}`;
     // Save to frontend/qr folder
     const qrCodePath = path.join(__dirname, 'frontend', 'qr', `${Date.now()}.png`);
     await QRCode.toFile(qrCodePath, qrData);
