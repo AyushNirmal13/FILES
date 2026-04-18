@@ -4,7 +4,8 @@ const fs = require('fs');
 
 const generateQRCode = async (aadhar) => {
   try {
-    const qrData = `http://localhost:5000/trace/${aadhar}`; // URL to trace page
+    const baseUrl = process.env.RENDER_EXTERNAL_URL || process.env.BASE_URL || `http://localhost:${process.env.PORT || 5000}`;
+    const qrData = `${baseUrl}/trace/${aadhar}`; // URL to trace page
 
     // Save the QR code to 'D:/SIGMA WEB DEV/Food/Food/frontend/qr' directory
     // Use dynamic path relative to this file

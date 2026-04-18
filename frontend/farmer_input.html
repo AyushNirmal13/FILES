@@ -131,7 +131,7 @@
     async function fetchPesticideData(aadharNumber) {
       try {
         console.log(`Fetching pesticide data for Aadhar: ${aadharNumber}`);
-        const response = await fetch(`http://localhost:5000/api/pesticideSeller/${aadharNumber}`);
+        const response = await fetch(`/api/pesticideSeller/${aadharNumber}`);
         const pesticideData = await response.json();
         console.log('Pesticide Data:', pesticideData);
 
@@ -181,7 +181,7 @@
       }
 
       try {
-        const response = await fetch('http://localhost:5000/api/farmer', {
+        const response = await fetch('/api/farmer', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(farmerData),

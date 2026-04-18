@@ -254,9 +254,7 @@ app.post('/api/distributor', (req, res) => {
     res.json({ qrCodeUrl: `/qr/${farmerAadhar}.png` });
   });
 });
-app.listen(5000, () => {
-  console.log('Server is running on http://localhost:5000');
-});
-// Server startup
 const PORT = process.env.PORT || 5000;
-const serverUrl = `http://localhost:${PORT}`;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
